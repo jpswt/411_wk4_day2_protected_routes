@@ -21,12 +21,12 @@ const ProtectedRoutes = () => {
 const Router = () => {
 	return (
 		<Routes>
-			<Route path="/login" element={<Login />} />
 			<Route element={<ProtectedRoutes />}>
 				<Route exact path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/car/:id" element={<Car />} />
 			</Route>
+			<Route path="/login" element={<Login />} />
 		</Routes>
 	);
 };
